@@ -1,0 +1,9 @@
+#!/usr/bin/env bash
+#
+# Summary: List all available lab commands
+#
+# Usage: lab commands
+
+set -e
+
+lasher _commands lab

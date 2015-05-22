@@ -28,5 +28,5 @@ load test_helper
 
   run lab-clone user/repo
 
-  assert_success "git clone gitlab@${GITLAB_HOST}:user/repo.git user/repo"
+  assert_success "git clone git@gitlab.server.com:user/repo.git user/repo"
 }

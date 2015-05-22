@@ -27,6 +27,11 @@ if [ -z "$GITLAB_HOST" ]; then
 fi
 export GITLAB_HOST
 
+if [ -z "$GITLAB_USER" ]; then
+  GITLAB_USER="gitlab"
+fi
+export GITLAB_USER
+
 bin_path="$(abs_dirname "$0")"
 export PATH="${bin_path}:${PATH}"
 

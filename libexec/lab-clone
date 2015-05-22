@@ -25,4 +25,4 @@ if [ -z "$repo" ]; then
   exit 1
 fi
 
-git clone gitlab@${GITLAB_HOST}:${user}/${repo}.git ${user}/${repo}
+git clone ${GITLAB_USER}@${GITLAB_HOST}:${user}/${repo}.git ${user}/${repo}

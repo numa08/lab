@@ -5,6 +5,7 @@ export LAB_CWD="${LAB_TEST_DIR}/cwd"
 export PATH="${BATS_TEST_DIRNAME}/../libexec:$PATH"
 
 export GITLAB_HOST="gitlab.server.com"
+export GITLAB_USER="git"
 
 mkdir -p "${LAB_TEST_DIR}"
 mkdir -p "${LAB_CWD}"

@@ -22,6 +22,11 @@ abs_dirname() {
   cd "$cwd"
 }
 
+if [ -z "$GITLAB_HOST" ]; then
+  GITLAB_HOST="gitlab.com"
+fi
+export GITLAB_HOST
+
 bin_path="$(abs_dirname "$0")"
 export PATH="${bin_path}:${PATH}"
 

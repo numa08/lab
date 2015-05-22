@@ -1,0 +1,28 @@
+#!/usr/bin/env bash
+#
+# Summary: Clone a repo from gitlab
+#
+# Usage: lab clone <user>/<repo>
+
+set -e
+
+if [ "$#" -ne 1 ]; then
+  lab-help clone
+  exit 1
+fi
+
+userrepo="$1"
+
+IFS=/ read -r user repo <<< "$userrepo"
+
+if [ -z "$user" ]; then
+  lab-help clone
+  exit 1
+fi
+
+if [ -z "$repo" ]; then
+  lab-help clone
+  exit 1
+fi
+
+git clone gitlab@${GITLAB_HOST}:${user}/${repo}.git ${user}/${repo}
